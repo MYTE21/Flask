@@ -3,27 +3,14 @@ from flask import *
 app = Flask(__name__)
 
 
-@app.route('/admin')
-def admin():
-    return 'admin'
+@app.route('/table/<int:num>')
+def table(num):
+    return render_template('print-table.html', n=num)
 
 
-@app.route('/librarian')
-def librarian():
-    return 'librarian'
-
-
-@app.route('/student')
-def student():
-    return 'student'
-
-
-@app.route('/user/<name>')
-def user(name):
-    route_name = ['admin', 'librarian', 'student']
-    for route in route_name:
-        if name == route:
-            return redirect(url_for(route))
+@app.route('/')
+def message():
+    return render_template('message.html')
 
 
 if __name__ == '__main__':

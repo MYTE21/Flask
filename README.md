@@ -8,8 +8,8 @@
 > **Create a folder with any name.**
 > 
 
-📌 **Step 1:
-Inside the folder create a file `app.py`. Insert the following code.**
+📌 **Step 1:**
+**Inside the folder create a file `app.py`. Insert the following code.**
 
 ```python
 from flask import Flask, render_template
@@ -60,9 +60,8 @@ if __name__ == "__main__":
 
 
 📌 **Step 4:**
-
 **Run The Application.**
 
 ```powershell
-**python app.py**
+python app.py
 ```
